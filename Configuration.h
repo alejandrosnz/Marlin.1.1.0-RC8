@@ -133,10 +133,10 @@
 // #define HEATER_2_MAXTEMP 275
 // #define BED_MAXTEMP 130
 // TEVO Tarantula Custom - limit temp to 230 hotend and 90 for heatbed - change if you upgrade your hotend and want to print with high temp materials
-#define HEATER_0_MAXTEMP 230
+#define HEATER_0_MAXTEMP 240
 #define HEATER_1_MAXTEMP 230
 #define HEATER_2_MAXTEMP 230
-#define BED_MAXTEMP 90
+#define BED_MAXTEMP 120
 
 // If your bed has low resistance e.g. .6 ohm and throws the fuse you can duty cycle it to reduce the
 // average current. The value should be an integer and the heat bed will be turned on for 1 interval of
@@ -346,11 +346,11 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // Travel limits after homing
-#define X_MAX_POS 185
+#define X_MAX_POS 200
 #define X_MIN_POS 0
-#define Y_MAX_POS 200
+#define Y_MAX_POS 214
 #define Y_MIN_POS 0
-#define Z_MAX_POS 150
+#define Z_MAX_POS 200
 #define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
@@ -483,7 +483,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // TEVO Tarantula Custom Settings - Home position - depend where you place endstops. Specially if big bed or not on Y.
 #define MANUAL_X_HOME_POS 0
-#define MANUAL_Y_HOME_POS 0
+#define MANUAL_Y_HOME_POS -12
 #define MANUAL_Z_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 402 // For delta: Distance between nozzle and print surface after homing.
 
@@ -497,7 +497,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // TEVO Tarantula Custom Settings - E-steps {X, Y, Z, Extruder}
 // to tune these values, print a cube and measure it with a caliper, keep adjusting esteps using gcode "M92 X80.00 Y80.00 Z1600.00 E100.00" until is correct then update here
 // Tune "Extruder esteps" by making a tick mark on your filament with a marker, telling the printer to extrude 100mm and then measuring how much filament was pulled in
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,1600,100}  // custom steps per unit for Tarantula
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {79.56,79.60,1600,100}  // custom steps per unit for Tarantula
 #define DEFAULT_MAX_FEEDRATE          {225, 225, 3, 25}    // (mm/sec)
 
 
